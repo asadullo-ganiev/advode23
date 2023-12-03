@@ -1,3 +1,6 @@
+mod part2;
+mod part1;
+
 use std::collections::HashMap;
 use std::fs::read_to_string;
 
