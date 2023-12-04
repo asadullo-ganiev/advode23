@@ -4,7 +4,10 @@ pub(crate) fn run() {
     let file_path = "./input2.txt";
     let file_content = match read_to_string(file_path) {
         Ok(file_content) => file_content,
-        Err(e) => println!("Failed to read file {}", e)
+        Err(e) => {
+            println!("Failed to read file {}", e);
+            return;
+        }
     };
 
     let mut arr:Vec<Vec<char>> = file_content.lines().map(|s| s.chars().collect()).collect();
